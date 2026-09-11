@@ -1,0 +1,303 @@
+{
+  "emptyCart": {
+    "items": [],
+    "timestamp": 1234567890000,
+    "version": "1.0"
+  },
+  "singleItemCart": {
+    "items": [
+      {
+        "productId": "prod-001",
+        "quantity": 1,
+        "addedAt": 1234567890000
+      }
+    ],
+    "timestamp": 1234567890000,
+    "version": "1.0"
+  },
+  "multipleItemsCart": {
+    "items": [
+      {
+        "productId": "prod-001",
+        "quantity": 2,
+        "addedAt": 1234567890000
+      },
+      {
+        "productId": "prod-005",
+        "quantity": 1,
+        "addedAt": 1234567891000
+      },
+      {
+        "productId": "prod-010",
+        "quantity": 3,
+        "addedAt": 1234567892000
+      }
+    ],
+    "timestamp": 1234567892000,
+    "version": "1.0"
+  },
+  "fullCart": {
+    "items": [
+      {"productId": "prod-001", "quantity": 5, "addedAt": 1234567890000},
+      {"productId": "prod-002", "quantity": 2, "addedAt": 1234567891000},
+      {"productId": "prod-003", "quantity": 1, "addedAt": 1234567892000},
+      {"productId": "prod-004", "quantity": 10, "addedAt": 1234567893000},
+      {"productId": "prod-005", "quantity": 3, "addedAt": 1234567894000},
+      {"productId": "prod-006", "quantity": 4, "addedAt": 1234567895000},
+      {"productId": "prod-007", "quantity": 2, "addedAt": 1234567896000},
+      {"productId": "prod-008", "quantity": 6, "addedAt": 1234567897000},
+      {"productId": "prod-009", "quantity": 8, "addedAt": 1234567898000},
+      {"productId": "prod-010", "quantity": 1, "addedAt": 1234567899000},
+      {"productId": "prod-011", "quantity": 7, "addedAt": 1234567900000},
+      {"productId": "prod-012", "quantity": 2, "addedAt": 1234567901000},
+      {"productId": "prod-013", "quantity": 5, "addedAt": 1234567902000},
+      {"productId": "prod-014", "quantity": 1, "addedAt": 1234567903000},
+      {"productId": "prod-015", "quantity": 12, "addedAt": 1234567904000}
+    ],
+    "timestamp": 1234567904000,
+    "version": "1.0"
+  },
+  "maxQuantityCart": {
+    "items": [
+      {
+        "productId": "prod-001",
+        "quantity": 999,
+        "addedAt": 1234567890000
+      }
+    ],
+    "timestamp": 1234567890000,
+    "version": "1.0"
+  },
+  "nearStockLimitCart": {
+    "items": [
+      {
+        "productId": "prod-014",
+        "quantity": 12,
+        "addedAt": 1234567890000
+      }
+    ],
+    "timestamp": 1234567890000,
+    "version": "1.0"
+  },
+  "expensiveCart": {
+    "items": [
+      {
+        "productId": "prod-003",
+        "quantity": 5,
+        "addedAt": 1234567890000
+      },
+      {
+        "productId": "prod-014",
+        "quantity": 3,
+        "addedAt": 1234567891000
+      },
+      {
+        "productId": "prod-024",
+        "quantity": 2,
+        "addedAt": 1234567892000
+      }
+    ],
+    "timestamp": 1234567892000,
+    "version": "1.0"
+  },
+  "corruptedCart_missingItems": {
+    "timestamp": 1234567890000,
+    "version": "1.0"
+  },
+  "corruptedCart_invalidStructure": {
+    "items": "not-an-array",
+    "timestamp": 1234567890000,
+    "version": "1.0"
+  },
+  "corruptedCart_invalidProductId": {
+    "items": [
+      {
+        "productId": "invalid-product-999",
+        "quantity": 1,
+        "addedAt": 1234567890000
+      }
+    ],
+    "timestamp": 1234567890000,
+    "version": "1.0"
+  },
+  "corruptedCart_negativeQuantity": {
+    "items": [
+      {
+        "productId": "prod-001",
+        "quantity": -5,
+        "addedAt": 1234567890000
+      }
+    ],
+    "timestamp": 1234567890000,
+    "version": "1.0"
+  },
+  "corruptedCart_missingQuantity": {
+    "items": [
+      {
+        "productId": "prod-001",
+        "addedAt": 1234567890000
+      }
+    ],
+    "timestamp": 1234567890000,
+    "version": "1.0"
+  },
+  "corruptedCart_stringQuantity": {
+    "items": [
+      {
+        "productId": "prod-001",
+        "quantity": "five",
+        "addedAt": 1234567890000
+      }
+    ],
+    "timestamp": 1234567890000,
+    "version": "1.0"
+  },
+  "corruptedCart_nullValues": {
+    "items": [
+      {
+        "productId": null,
+        "quantity": null,
+        "addedAt": 1234567890000
+      }
+    ],
+    "timestamp": 1234567890000,
+    "version": "1.0"
+  },
+  "corruptedCart_malformedJSON": "{items: [invalid json}",
+  "corruptedCart_xssAttempt": {
+    "items": [
+      {
+        "productId": "<script>alert('XSS')</script>",
+        "quantity": 1,
+        "addedAt": 1234567890000
+      }
+    ],
+    "timestamp": 1234567890000,
+    "version": "1.0"
+  },
+  "corruptedCart_sqlInjection": {
+    "items": [
+      {
+        "productId": "prod-001' OR '1'='1",
+        "quantity": 1,
+        "addedAt": 1234567890000
+      }
+    ],
+    "timestamp": 1234567890000,
+    "version": "1.0"
+  },
+  "corruptedCart_oversizedData": {
+    "items": [],
+    "timestamp": 1234567890000,
+    "version": "1.0",
+    "bloat": "x".repeat(10000000)
+  },
+  "oldVersionCart": {
+    "items": [
+      {
+        "productId": "prod-001",
+        "quantity": 2,
+        "addedAt": 1234567890000
+      }
+    ],
+    "timestamp": 1234567890000,
+    "version": "0.5"
+  },
+  "futureVersionCart": {
+    "items": [
+      {
+        "productId": "prod-001",
+        "quantity": 2,
+        "addedAt": 1234567890000
+      }
+    ],
+    "timestamp": 1234567890000,
+    "version": "2.0"
+  },
+  "expiredCart": {
+    "items": [
+      {
+        "productId": "prod-001",
+        "quantity": 2,
+        "addedAt": 1234567890000
+      }
+    ],
+    "timestamp": 946684800000,
+    "version": "1.0",
+    "expiresAt": 946771200000
+  },
+  "cartWithDuplicates": {
+    "items": [
+      {
+        "productId": "prod-001",
+        "quantity": 2,
+        "addedAt": 1234567890000
+      },
+      {
+        "productId": "prod-001",
+        "quantity": 3,
+        "addedAt": 1234567891000
+      }
+    ],
+    "timestamp": 1234567891000,
+    "version": "1.0"
+  },
+  "cartWithZeroQuantity": {
+    "items": [
+      {
+        "productId": "prod-001",
+        "quantity": 0,
+        "addedAt": 1234567890000
+      }
+    ],
+    "timestamp": 1234567890000,
+    "version": "1.0"
+  },
+  "cartExceedingStockLimit": {
+    "items": [
+      {
+        "productId": "prod-014",
+        "quantity": 100,
+        "addedAt": 1234567890000
+      }
+    ],
+    "timestamp": 1234567890000,
+    "version": "1.0"
+  },
+  "cartWithDecimalQuantity": {
+    "items": [
+      {
+        "productId": "prod-001",
+        "quantity": 2.5,
+        "addedAt": 1234567890000
+      }
+    ],
+    "timestamp": 1234567890000,
+    "version": "1.0"
+  },
+  "cartWithSpecialCharacters": {
+    "items": [
+      {
+        "productId": "prod-001",
+        "quantity": 1,
+        "addedAt": 1234567890000,
+        "note": "Special chars: <>&\"'`\n\r\t"
+      }
+    ],
+    "timestamp": 1234567890000,
+    "version": "1.0"
+  },
+  "cartWithUnicodeEmoji": {
+    "items": [
+      {
+        "productId": "prod-001",
+        "quantity": 1,
+        "addedAt": 1234567890000,
+        "note": "🛒🎉💯✨🚀"
+      }
+    ],
+    "timestamp": 1234567890000,
+    "version": "1.0"
+  }
+}
+
